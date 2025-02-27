@@ -1,0 +1,62 @@
+---
+title: "Simple Data Explorer"
+author: "Rene Persau"
+date: "`r Sys.Date()`"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+
+## Slide 1: Introduction
+
+- **Simple Data Explorer** is a Shiny application.
+- Allows users to explore built-in R datasets interactively.
+- Select a dataset and visualize it dynamically.
+- Useful for beginners learning **data exploration**.
+
+---
+
+## Slide 2: Key Features
+
+- Choose from **built-in datasets** (`mtcars`, `iris`, etc.).
+- Select variables for **visualization**.
+- View **dynamic plots** updated based on user input.
+- **No coding required** – interact via UI elements.
+
+---
+
+## Slide 3: How It Works
+
+1. User selects a dataset from a **dropdown menu**.
+2. The app displays a list of available **variables**.
+3. A **histogram or scatter plot** is generated dynamically.
+4. Changes reflect **instantly** using Shiny's reactivity.
+
+
+---
+
+## Slide 4: Sample Code (Shiny)
+
+Example code:
+
+output$dataPlot <- renderPlot({
+  df <- get(input$dataset, "package:datasets")
+  ggplot(df, aes_string(x = input$variable)) +
+    geom_histogram(fill = "blue", bins = 30) +
+    theme_minimal()
+})
+
+
+Visualization:
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+# Load required library
+library(ggplot2)
+
+# Example dataset
+df <- mtcars
+
+# Generate plot
+ggplot(df, aes(x = mpg)) +
+  geom_histogram(fill = "blue", bins = 15) +
+  theme_minimal()
