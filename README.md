@@ -12,7 +12,7 @@ Features:
 - server.R
 
 ## Steps to Deploy on RStudio's Shiny Server
-Install shiny: `install.packages("shiny")`
-Save `ui.R` and `server.R` in a folder (e.g., ShinyApp/).
-Deploy using `rsconnect` package or host it on `shinyapps.io`.
-Push code to `GitHub` and share the link.
+- Install shiny: `install.packages("shiny")`
+- Save `ui.R` and `server.R` in a folder (e.g., ShinyApp/).
+- Deploy using `rsconnect` package or host it on `shinyapps.io`.
+- Push code to `GitHub` and share the link.
