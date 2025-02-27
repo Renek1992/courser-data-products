@@ -1,7 +1,9 @@
 # coursera-data-products
 
 ## Shiny App: Simple Data Explorer
-Purpose: Allow users to select a dataset, choose variables, and visualize data dynamically.
+Purpose: 
+- Allow users to select a dataset, choose variables, and visualize data dynamically.
+
 Features:
 - Dropdown to select an R dataset (e.g., mtcars, iris, airquality).
 - Checkbox to allow the user to choose variables for visualization.
